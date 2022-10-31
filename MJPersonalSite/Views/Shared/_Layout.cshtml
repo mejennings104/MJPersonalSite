@@ -1,0 +1,66 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>Matthew Jennings</title>
+        <!-- Favicon-->
+        <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/assets/images/favicon-16x16.png">
+        <link rel="manifest" href="/site.webmanifest">
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="~/css/styles.css" rel="stylesheet" />
+
+    </head>
+    <body class="bgimg" id="body">
+        <!-- Responsive navbar-->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container">
+                <a class="navbar-brand" href="#!">My Personal Site</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                        <li class="nav-item"><a class="nav-link" href="@Url.Action("Index", "Home")">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="@Url.Action("Resume", "Home")">Resume</a></li>
+                        <li class="nav-item"><a class="nav-link" href="@Url.Action("Portfolio", "Home")">Portfolio</a></li>
+                        <li class="nav-item"><a class="nav-link" href="@Url.Action("Links", "Home")">Links</a></li>
+                        <li class="nav-item"><a class="nav-link" href="@Url.Action("Contact", "Home")">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+
+        @RenderBody()
+
+
+                                <!-- Footer-->
+        <footer class="py-5 bg-dark">
+            <div class="container"><p class="m-0 text-center text-white">Copyright &copy; 2022</p></div>
+        </footer>
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- jquery -->
+        <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+        <!-- Core theme JS-->
+        <script src="js/scripts.js"></script>
+
+
+            @if (ViewData["Title"].ToString() == "Home")
+    {
+            <!-- Enable .bgimg (All pages except index) -->
+        <script>
+            let body = document.getElementById('body');
+            if (body.classList.contains('bgimg')) {
+                body.classList.remove('bgimg');  
+                body.classList.add('');
+            };
+        </script>
+
+    }
+
+    </body>
+</html>
